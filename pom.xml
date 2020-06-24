@@ -132,7 +132,7 @@
                         <version>20.1.0</version>
                         <configuration>
                             <buildArgs>
-                                -Dspring.native.mode=agent -Dspring.graal.remove-unused-autoconfig=true -Dspring.graal.mode=initialization-only -Dspring.graal.dump-config=/tmp/computed-reflect-config.json -Dspring.graal.verbose=true -Dspring.graal.skip-logback=true  -H:Class=br.com.oliveira.learning.graalvm.Application -H:+ReportExceptionStackTraces -H:+TraceClassInitialization --no-fallback --allow-incomplete-classpath --report-unsupported-elements-at-runtime -H:+ReportExceptionStackTraces -H:Name=kotlin-spring --no-server --initialize-at-build-time=org.reactivestreams.Publisher
+                                -Dspring.native.mode=agent -Dspring.graal.remove-unused-autoconfig=true -Dspring.graal.mode=initialization-only -Dspring.graal.dump-config=/tmp/computed-reflect-config.json -Dspring.graal.verbose=true -Dspring.graal.skip-logback=true  -H:Class=br.com.oliveira.learning.graalvm.Application -H:+ReportExceptionStackTraces -H:+TraceClassInitialization --no-fallback --allow-incomplete-classpath --report-unsupported-elements-at-runtime -H:+ReportExceptionStackTraces -H:Name=kotlin-spring --no-server --initialize-at-build-time=org.reactivestreams.Publisher --initialize-at-run-time=io.netty.channel.unix.Socket,io.netty.util.internal.logging.Log4JLogger --initialize-at-run-time=io.netty.channel.unix.IovArray --initialize-at-run-time=io.netty.channel.epoll.EpollEventLoop --initialize-at-run-time=io.netty.channel.unix.Errors
                             </buildArgs>
                         </configuration>
                         <executions>
